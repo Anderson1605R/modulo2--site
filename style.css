@@ -1,0 +1,171 @@
+body {
+  background-image: url("assets/img/wave.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* home */
+
+.hero,
+.formulario {
+  max-width: 50%;
+}
+.formulario {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-paragraph {
+  font-size: 1.25rem;
+}
+
+/* destinos */
+
+h2 {
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+figcaption {
+  color: black;
+  font-weight: 600;
+  padding: 2px;
+  text-align: center;
+}
+
+.img-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* contatos */
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.socials {
+  width: 50%;
+}
+.contato-title {
+  margin-bottom: 10px;
+}
+.contato-paragraph {
+  margin-bottom: 15px;
+}
+
+.form-contatos {
+  padding: 10px;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icon {
+  width: 5%;
+  padding-right: 5px;
+}
+
+/* promoções */
+
+.promocao {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+  place-items: center;
+}
+.card-paragraph {
+  font-size: 10px;
+  margin-top: 50px;
+  border-top: 0.4px solid #ccc;
+}
+span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* responsividade */
+
+@media only screen and (max-width: 790px) {
+  .section-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 999px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .icon {
+    width: 10%;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .cadastro-container {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 1035px) {
+  .promocao {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 775px) {
+  .promocao {
+    grid-template-columns: 1fr;
+  }
+}
