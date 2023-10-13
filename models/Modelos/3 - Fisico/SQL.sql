@@ -4,16 +4,17 @@
 
 CREATE TABLE User (
     Id_user INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(50),
-    cpf_unico VARCHAR(20) UNIQUE,
-    email VARCHAR(50), 
-);
+    nome VARCHAR(50) NOT NULL,
+    cpf_unico VARCHAR(20) UNIQUE NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    senha VARCHAR(50) NOT NULL
+ );
 
 CREATE TABLE Pacote (
     ID_pacote INT AUTO_INCREMENT PRIMARY KEY,
-    destino VARCHAR(50),
-    preco DECIMAL(10,2),
-    promocao_boolean BOOLEAN
+    destino VARCHAR(50) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    promocao_boolean BOOLEAN NOT NULL
 );
 
 CREATE TABLE Compra (
